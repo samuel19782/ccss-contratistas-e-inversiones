@@ -1,0 +1,270 @@
+/* Estilos del video de fondo */
+video.background {
+    position: absolute;
+    top: 80px; /* Desplazar hacia abajo */
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh; /* Altura específica para el video */
+    object-fit: cover;
+    z-index: -100;
+    filter: brightness(50%); /* Aplicar un filtro para oscurecer el video */
+}
+
+/* Estilo del contenido principal */
+.main {
+    position: relative;
+    top: -8px;
+    width: 110%;
+    height: 68px; /* Altura de la franja gris
+    margin: 0 auto; /* Centrar el contenido */
+    padding-top: 10px; /* Espacio suficiente para el logo */
+    z-index: 0;
+    text-align: center;
+    left: -20px; /* Ajustar la distancia desde el left */
+    background-color: #686565; /* Fondo gris para el contenido principal */
+}
+
+/* Franja negra personalizable */
+.custom-bar {
+    width: 100%;
+    height: 50px; /* Altura de la franja negra */
+    background-color: #000; /* Color negro */
+    position: absolute; /* Posicionar sobre el contenido principal */
+    top: 1000; /* Ajustar según la posición deseada */
+    left: 0;
+    z-index: 1; /* Asegurarse de que esté por encima del contenido */
+}
+
+/* Estilo del logo y el título */
+.main h1 {
+    font-size: 1.2em;
+    color: rgb(233, 219, 32);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: absolute; /* Posicionar el logo en la esquina superior izquierda */
+    top: 5px; /* Ajustar la distancia desde el top */
+    left: 10px; /* Ajustar la distancia desde el left */
+}
+
+.main h1 img {
+    height: 70px; /* Ajustar el tamaño del logo */
+    margin-right: 20px; /* Espacio entre el logo y el texto */
+    margin-left: 20px; /* Añadir margen izquierdo al logo */
+    border: #eff0ed;
+}
+
+.main h1 span {
+    display: block;
+    font-size: 1.5em;
+}
+
+.main h2 {
+    font-size: 2.5em;
+    color: #fff; /* Color blanco para el texto visible sobre fondo oscuro */
+    height: 40vh; /* Altura del subtítulo */
+    display: flex;
+    justify-content: center; /* Centrar el texto horizontalmente */
+    align-items: center;
+    margin-top: 50;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 250px; /* Añadir algo de espacio lateral */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombras para mejorar la visibilidad del texto */
+    background: none; /* Eliminar fondo del título */
+}
+
+.promo p {
+    margin-top: 20px; /* Espacio superior para el párrafo */
+    border: black;
+}
+
+.promo button {
+    background-color: #28a745; /* Color verde para el botón */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Estilos para los botones de navegación */
+.nav-buttons {
+    position: absolute;
+    top: 25px; /* Ajustar la posición superior */
+    right: 20px; /* Ajustar la posición derecha */
+    display: flex;
+    flex-direction: row; /* Disponer en fila */
+    gap: 10px;
+    z-index: 1;
+}
+
+.nav-buttons button {
+    background-color: transparent; /* Sin fondo para los botones de navegación */
+    color: #e0f526; /* Color para los botones de navegación */
+    border: 2px solid #def323; /* Borde cian para los botones de navegación */
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.nav-buttons button:hover {
+    background-color: #17a2b8; /* Fondo cian al pasar el ratón */
+    color: #fff; /* Texto blanco al pasar el ratón */
+}
+
+/* Estilos para las mini ventanas deslizables */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(137, 201, 231, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-close {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #007bff; /* Color para el encabezado de las mini ventanas */
+}
+
+.modal.show {
+    width: 100%;
+}
+
+/* Estilos para la sección "Empresas Que Confiaron en Nosotros" */
+.partners {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff7f7; /* Fondo gris claro para destacar las imágenes */
+    position: relative;
+    margin-top: 500px; /* Ajustar el margen superior para separación */
+}
+
+.partners h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.partners .partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.partners img {
+    max-width: 150px; /* Tamaño ajustado para las imágenes */
+    height: auto;
+    border: none; /* Eliminar el borde por defecto de las imágenes */
+    background-color: transparent; /* Eliminar el fondo de las imágenes */
+}
+
+/* Estilos para la sección "Sobre Nosotros" */
+.about-us {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que las columnas se ajusten en pantallas más pequeñas */
+    padding: 40px 20px;
+    background-color: rgb(226, 238, 240); /* Fondo blanco para la sección "Sobre Nosotros" */
+    color: #333;
+    margin-top: 10px; /* Aumentar el margen superior para separar del contenido anterior */
+    position: relative; /* Para poder centrar el botón de Facebook */
+}
+
+.about-us .text-content {
+    flex: 1;
+    padding-right: 20px; /* Espacio a la derecha */
+    max-width: 50%; /* Limitar el ancho máximo a la mitad del contenedor */
+}
+
+.about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff; /* Color llamativo para el encabezado */
+    background: none; /* Eliminar fondo de h2 */
+}
+
+.about-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.about-us .about-us-images {
+    flex: 1;
+    max-width: 50%; /* Limitar el ancho máximo a la mitad del contenedor */
+}
+
+.about-us img {
+    width: 90%; /* Asegurarse de que las imágenes ocupen todo el ancho del contenedor */
+    height: auto;
+    border-radius: 15px;
+    margin: 10px 0; /* Espacio vertical entre imágenes */
+}
+
+.about-us .social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about-us .social-media a {
+    background-color: #2187fc; /* Color azul de Facebook */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about-us .social-media a:hover {
+    background-color: #35e9f0; /* Color más oscuro para el hover */
+}
+
+/* Estilos para la sección final */
+.footer {
+    background-color: #a7a5a1; /* Fondo azul oscuro */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.footer .contact-info {
+    margin-top: 10px;
+}

@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC SS Contratistas e Inversiones E.I.R.L</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video class="background" id="background-video" src="/Nueva carpeta/video 2.mp4" autoplay muted loop></video>
+
+    <!-- Sección principal -->
+    <section class="main">
+        <h1>
+            <img src="/Nueva carpeta/logo.png" alt="Logo">
+            <span>CC SS Contratistas e Inversiones E.I.R.L</span>
+        </h1>
+        <div class="promo">
+            <h2>Tu visión, nuestra misión, hacemos realidad cada proyecto</h2>
+        </div>
+    </section>
+
+    <!-- Botones de navegación -->
+    <div class="nav-buttons">
+        <button type="button" onclick="openModal('inicio')">Inicio</button>
+        <button type="button" onclick="openModal('nosotros')">Nosotros</button>
+        <button type="button" onclick="openModal('contacto')">Contáctanos</button>
+    </div>
+
+    <!-- Mini ventana de Inicio -->
+    <div id="modal-inicio" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Inicio</h2>
+                <span class="modal-close" onclick="closeModal('inicio')">&times;</span>
+            </div>
+            <p>Bienvenido a CC SS Contratistas e Inversiones E.I.R.L. Nos especializamos en ofrecer soluciones integrales para tus proyectos de construcción y reformas. Conoce más sobre nuestros servicios y cómo podemos ayudarte a materializar tus ideas.</p>
+        </div>
+    </div>
+
+    <!-- Mini ventana de Nosotros -->
+    <div id="modal-nosotros" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Nosotros</h2>
+                <span class="modal-close" onclick="closeModal('nosotros')">&times;</span>
+            </div>
+            <p>En CC SS Contratistas e Inversiones E.I.R.L, contamos con un equipo altamente capacitado y con años de experiencia en el sector de la construcción. Nos dedicamos a entregar proyectos de alta calidad, desde la planificación hasta la ejecución, garantizando la satisfacción total de nuestros clientes. Trabajamos con los más altos estándares de seguridad y profesionalismo, utilizando tecnología de punta para asegurar que cada proyecto se complete a tiempo y dentro del presupuesto.</p>
+            <div class="modal-images">
+                <img src="/Nueva carpeta/equipo1.jpg" alt="Equipo de Trabajo 1">
+                <img src="/Nueva carpeta/equipo2.jpg" alt="Equipo de Trabajo 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Mini ventana de Contacto -->
+    <div id="modal-contacto" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contáctanos</h2>
+                <span class="modal-close" onclick="closeModal('contacto')">&times;</span>
+            </div>
+            <form id="contact-form" action="mailto:contacto@ccsscontratistas.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="tel" name="phone" placeholder="Teléfono" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Segundo video -->
+    <div class="additional-video">
+        <video src="/Nueva carpeta/otro-video.mp4" autoplay muted loop></video>
+    </div>
+
+    <!-- Sección de Imágenes de Socios -->
+    <section class="partners">
+        <h3>Empresas que Confían en Nuestra Excelencia</h3>
+        <div class="partner-logos">
+            <img src="/Nueva carpeta/red de salud.jpg" alt="RED DE SALUD LA CONVENCION">
+            <img src="/Nueva carpeta/megantoni.jpg" alt="Municipalidad de Megantoni">
+            <img src="/Nueva carpeta/kumpiru.jpg" alt="Kumpiru">
+        </div>
+    </section>
+
+    <!-- Sección "Sobre Nosotros" al final -->
+    <section class="about-us">
+        <div class="text-content">
+            <h2>Sobre Nosotros</h2>
+            <p>En CC SS Contratistas e Inversiones E.I.R.L, contamos con un equipo altamente capacitado y con años de experiencia en el sector de la construcción. Nos dedicamos a entregar proyectos de alta calidad, desde la planificación hasta la ejecución, garantizando la satisfacción total de nuestros clientes. Trabajamos con los más altos estándares de seguridad y profesionalismo, utilizando tecnología de punta para asegurar que cada proyecto se complete a tiempo y dentro del presupuesto.</p>
+            <p>Para conocer más sobre nuestras actividades y proyectos, síguenos en nuestras redes sociales. ¡Estamos aquí para transformar tus ideas en realidad!</p>
+            <div class="social-media">
+                <a href="https://web.facebook.com/profile.php?id=100083327961324&sk=about_details" target="_blank">Síguenos en Facebook</a>
+            </div>
+        </div>
+        <div class="about-us-images">
+            <img src="/Nueva carpeta/casa sam.jpeg" alt="Imagen 1">
+            <img src="/Nueva carpeta/casa sam 2.jpeg" alt="Imagen 2">
+        </div>
+    </section>
+
+    <!-- Sección final -->
+    <footer class="footer">
+        <h2>Contacto y Más Información</h2>
+        <p>Estamos aquí para ayudarte a dar vida a tus proyectos. No dudes en contactarnos para más detalles o para solicitar un presupuesto.</p>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:contacto@ccsscontratistas.com">ccsscontratistaseinversiones@hotmail.com</a></p>
+            <p>Teléfono: +51 938419024</p>
+        </div>
+    </footer>
+
+    <!-- Script para ajustar el tamaño del video -->
+    <script>
+        function openModal(id) {
+            document.getElementById(`modal-${id}`).classList.add('show');
+        }
+
+        function closeModal(id) {
+            document.getElementById(`modal-${id}`).classList.remove('show');
+        }
+    </script>
+</body>
+</html>
